@@ -1,0 +1,15 @@
+<form [formGroup]="doctorForm" (ngSubmit)="createDoctor()">
+    <div>
+        <input [formControl]="controls.firstName">
+        <div *ngIf="controls.firstName.invalid">{{getErrorMessage(controls.firstName)}}</div>
+    </div>
+    <div>
+        <input [formControl]="controls.lastName">
+        <div *ngIf="controls.lastName.invalid">{{getErrorMessage(controls.lastName)}}</div>
+    </div>
+    <div>
+        <input [formControl]="controls.specialization">
+        <div *ngIf="controls.specialization.invalid">{{getErrorMessage(controls.specialization)}}</div>
+    </div>
+    <button [disabled]="doctorForm.invalid" o >Utwórz doktora</button>
+</form>
