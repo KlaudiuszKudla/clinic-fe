@@ -14,4 +14,4 @@ RUN npm install -g @angular/cli
 RUN chmod +x /home/node/app/node_modules/.bin/ng
 USER node
 
-CMD ["npm", "start"]
+CMD ["ng", "serve", "--host", "0.0.0.0"]
